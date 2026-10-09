@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
+usage() {
+    cat <<'USAGE'
+Usage: ./bootstrap.sh <command>
+
+Commands:
+  all            Install packages, Flatpaks, and configuration
+  official       Install official Arch packages
+  aur            Install AUR packages
+  dotfiles       Deploy missing configuration files
+  dotfiles-check Preview dotfile deployment without changes
+  wallpapers     Clone the wallpaper repository if needed
+  services       Enable and start required system services
+  check          Check script syntax and required project files
+  help           Show this help
+  flatpaks       Install Flatpak applications
+USAGE
+}
+
+command="${1:-help}"
+
+case "$command" in
+    all)
+        "$SCRIPT_DIR/scripts/install-official.sh"
+        "$SCRIPT_DIR/scripts/install-aur.sh"
+        "$SCRIPT_DIR/scripts/setup-services.sh"
+        "$SCRIPT_DIR/scripts/install-flatpaks.sh"
+        "$SCRIPT_DIR/scripts/install-wallpapers.sh"
+        "$SCRIPT_DIR/scripts/deploy-dotfiles.sh"
+        ;;
+    official)
+        exec "$SCRIPT_DIR/scripts/install-official.sh"
+        ;;
+    aur)
+        exec "$SCRIPT_DIR/scripts/install-aur.sh"
+        ;;
+    dotfiles)
+        exec "$SCRIPT_DIR/scripts/deploy-dotfiles.sh"
+        ;;
+    dotfiles-check)
+        exec "$SCRIPT_DIR/scripts/deploy-dotfiles.sh" --dry-run
+        ;;
+    wallpapers)
+        exec "$SCRIPT_DIR/scripts/install-wallpapers.sh"
+        ;;
+    services)
+        exec "$SCRIPT_DIR/scripts/setup-services.sh"
+        ;;
+    flatpaks)
+        exec "$SCRIPT_DIR/scripts/install-flatpaks.sh"
+        ;;
+    check)
+        exec "$SCRIPT_DIR/scripts/check.sh"
+        ;;
+    help|-h|--help)
+        usage
+        ;;
+    *)
+        echo "Unknown command: $command" >&2
+        usage >&2
+        exit 2
+        ;;
+esac

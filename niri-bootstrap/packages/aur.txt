@@ -1,0 +1,7 @@
+yay
+vscodium-bin
+github-desktop-bin
+bruno-bin
+spotify
+mpvpaper
+coolercontrol-bin

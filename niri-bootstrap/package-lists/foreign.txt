@@ -1,0 +1,16 @@
+android-studio
+bruno-bin
+catppuccin-gtk-theme-mocha
+coolercontrol
+eww
+github-desktop
+kvantum-theme-catppuccin-git
+mpvpaper
+noctalia-shell
+papirus-folders-catppuccin-git
+proton-mail-bin
+snapd
+spotify
+swaylock-effects
+vscodium-bin
+yay
