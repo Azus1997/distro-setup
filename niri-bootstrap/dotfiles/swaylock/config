@@ -1,0 +1,40 @@
+ignore-empty-password
+show-failed-attempts
+daemonize
+
+font=Adwaita Sans
+
+indicator
+clock
+datestr=%A, %d %B
+timestr=%H:%M
+
+image= /home/mati/Pictures/wallpapers/b-650.jpg
+
+font= "JetBrainsMono Nerd Font"
+
+indicator-radius=60
+indicator-thickness=6
+indicator-x-position=1800
+indicator-y-position=900
+
+inside-color=1e1e2e
+ring-color=cba6f7
+separator-color=00000000
+
+text-color=cdd6f4
+text-clear-color=f9e2af
+text-ver-color=a6e3a1
+text-wrong-color=f38ba8
+
+inside-clear-color=f9e2af
+ring-clear-color=f9e2af
+
+inside-ver-color=a6e3a1
+ring-ver-color=a6e3a1
+
+inside-wrong-color=f38ba8
+ring-wrong-color=f38ba8
+
+key-hl-color=89b4fa
+bs-hl-color=f38ba8

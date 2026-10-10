@@ -5,3 +5,4 @@ bruno-bin
 spotify
 mpvpaper
 coolercontrol-bin
+swaylock-effects

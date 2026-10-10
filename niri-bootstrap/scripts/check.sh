@@ -16,7 +16,12 @@ for file in \
     "$SCRIPT_DIR/install-wallpapers.sh" \
     "$SCRIPT_DIR/setup-sddm.sh" \
     "$SCRIPT_DIR/setup-kitty.sh" \
-    "$SCRIPT_DIR/setup-grub.sh"
+    "$SCRIPT_DIR/setup-thunar.sh" \
+    "$SCRIPT_DIR/setup-eww.sh" \
+    "$SCRIPT_DIR/setup-fuzzel.sh" \
+    "$SCRIPT_DIR/setup-gtk.sh" \
+    "$SCRIPT_DIR/setup-grub.sh" \
+    "$SCRIPT_DIR/setup-swaylock.sh"
 do
     if bash -n "$file"; then
         echo "OK: syntax $file"
@@ -40,6 +45,18 @@ for file in \
     "$SCRIPT_DIR/install-wallpapers.sh" \
     "$SCRIPT_DIR/setup-sddm.sh" \
     "$SCRIPT_DIR/setup-kitty.sh" \
+    "$SCRIPT_DIR/setup-thunar.sh" \
+    "$ROOT_DIR/dotfiles/Thunar/uca.xml" \
+    "$ROOT_DIR/dotfiles/Thunar/accels.scm" \
+    "$ROOT_DIR/dotfiles/eww/eww.yuck" \
+    "$ROOT_DIR/dotfiles/eww/eww.scss" \
+    "$ROOT_DIR/dotfiles/fuzzel/fuzzel.ini" \
+    "$SCRIPT_DIR/setup-gtk.sh" \
+    "$ROOT_DIR/dotfiles/nwg-look/config" \
+    "$ROOT_DIR/dotfiles/gtk-3.0/settings.ini" \
+    "$ROOT_DIR/dotfiles/gtk-4.0/settings.ini" \
+    "$SCRIPT_DIR/setup-swaylock.sh" \
+    "$ROOT_DIR/dotfiles/swaylock/config" \
     "$SCRIPT_DIR/setup-grub.sh"
 do
     if [[ -f "$file" ]]; then

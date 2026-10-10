@@ -25,7 +25,6 @@ tree-sitter-cli
 ttf-jetbrains-mono-nerd
 papirus-icon-theme
 kitty
-swaylock
 flatpak
 thunar
 playerctl

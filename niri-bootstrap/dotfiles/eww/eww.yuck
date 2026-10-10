@@ -1,0 +1,18 @@
+(defwidget hello ()
+  (box :orientation "v"
+       :space-evenly true
+    (label :text "Hello from Eww!")
+    (label :text "Niri + Eww")))
+
+(defwindow hello
+  :monitor 0
+  :geometry (geometry
+    :x "20px"
+    :y "20px"
+    :width "250px"
+    :height "100px"
+    :anchor "top left")
+  :stacking "bg"
+  :windowtype "desktop"
+  :wm-ignore false
+  (hello))

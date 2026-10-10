@@ -16,7 +16,12 @@ Commands:
   wallpapers     Clone the wallpaper repository if needed
   sddm           Install and configure SDDM with Purple Leaves
   grub           Configure the Dracula theme for an existing GRUB install
+  swaylock       Install swaylock-effects and deploy its config
+  thunar         Install Thunar and configure its settings
+  eww            Install Eww and configure its widgets
+  fuzzel         Install Fuzzel and configure its launcher
   kitty          Install Kitty and configure its terminal settings
+  gtk            Install nwg-look and deploy GTK settings
   services       Enable and start required system services
   check          Check script syntax and required project files
   help           Show this help
@@ -56,9 +61,29 @@ case "$command" in
     grub)
         exec "$SCRIPT_DIR/scripts/setup-grub.sh"
         ;;
+    swaylock)
+        shift
+        exec "$SCRIPT_DIR/scripts/setup-swaylock.sh" "$@"
+        ;;
+    thunar)
+        shift
+        exec "$SCRIPT_DIR/scripts/setup-thunar.sh" "$@"
+        ;;
+     eww)
+        shift
+        exec "$SCRIPT_DIR/scripts/setup-eww.sh" "$@"
+        ;;
+    fuzzel)
+        shift
+        exec "$SCRIPT_DIR/scripts/setup-fuzzel.sh" "$@"
+        ;;
     kitty)
         shift
         exec "$SCRIPT_DIR/scripts/setup-kitty.sh" "$@"
+        ;;
+    gtk)
+        shift
+        exec "$SCRIPT_DIR/scripts/setup-gtk.sh" "$@"
         ;;
     services)
         exec "$SCRIPT_DIR/scripts/setup-services.sh"
