@@ -14,6 +14,9 @@ Commands:
   dotfiles       Deploy missing configuration files
   dotfiles-check Preview dotfile deployment without changes
   wallpapers     Clone the wallpaper repository if needed
+  sddm           Install and configure SDDM with Purple Leaves
+  grub           Configure the Dracula theme for an existing GRUB install
+  kitty          Install Kitty and configure its terminal settings
   services       Enable and start required system services
   check          Check script syntax and required project files
   help           Show this help
@@ -46,6 +49,16 @@ case "$command" in
         ;;
     wallpapers)
         exec "$SCRIPT_DIR/scripts/install-wallpapers.sh"
+        ;;
+    sddm)
+        exec "$SCRIPT_DIR/scripts/setup-sddm.sh"
+        ;;
+    grub)
+        exec "$SCRIPT_DIR/scripts/setup-grub.sh"
+        ;;
+    kitty)
+        shift
+        exec "$SCRIPT_DIR/scripts/setup-kitty.sh" "$@"
         ;;
     services)
         exec "$SCRIPT_DIR/scripts/setup-services.sh"

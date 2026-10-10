@@ -13,7 +13,10 @@ for file in \
     "$SCRIPT_DIR/deploy-dotfiles.sh" \
     "$SCRIPT_DIR/install-flatpaks.sh" \
     "$SCRIPT_DIR/setup-services.sh" \
-    "$SCRIPT_DIR/install-wallpapers.sh"
+    "$SCRIPT_DIR/install-wallpapers.sh" \
+    "$SCRIPT_DIR/setup-sddm.sh" \
+    "$SCRIPT_DIR/setup-kitty.sh" \
+    "$SCRIPT_DIR/setup-grub.sh"
 do
     if bash -n "$file"; then
         echo "OK: syntax $file"
@@ -30,11 +33,14 @@ for file in \
     "$ROOT_DIR/dotfiles/noctalia/colors.json" \
     "$ROOT_DIR/dotfiles/noctalia/plugins.json" \
     "$ROOT_DIR/dotfiles/noctalia/settings.json" \
-    "$SCRIPT_DIR/install-flatpaks.sh" \
-    "$SCRIPT_DIR/setup-services.sh" \
     "$ROOT_DIR/dotfiles/kitty/kitty.conf" \
     "$ROOT_DIR/dotfiles/kitty/catppuccin-mocha.conf" \
-    "$SCRIPT_DIR/install-wallpapers.sh"
+    "$SCRIPT_DIR/install-flatpaks.sh" \
+    "$SCRIPT_DIR/setup-services.sh" \
+    "$SCRIPT_DIR/install-wallpapers.sh" \
+    "$SCRIPT_DIR/setup-sddm.sh" \
+    "$SCRIPT_DIR/setup-kitty.sh" \
+    "$SCRIPT_DIR/setup-grub.sh"
 do
     if [[ -f "$file" ]]; then
         echo "OK: found $file"
