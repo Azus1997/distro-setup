@@ -98,7 +98,7 @@ read -r -p "Continue? [y/N] " answer
 [[ "$answer" =~ ^[Yy]$ ]] || exit 0
 
 if ! pacman -Q eww >/dev/null 2>&1; then
-    sudo pacman -S --needed eww
+    yay -S eww --noconfirm
 fi
 
 install -d "$DEST_DIR"
