@@ -21,6 +21,7 @@ for file in \
     "$SCRIPT_DIR/setup-fuzzel.sh" \
     "$SCRIPT_DIR/setup-gtk.sh" \
     "$SCRIPT_DIR/setup-grub.sh" \
+    "$SCRIPT_DIR/setup-niri.sh" \
     "$SCRIPT_DIR/setup-swaylock.sh"
 do
     if bash -n "$file"; then
@@ -57,6 +58,7 @@ for file in \
     "$ROOT_DIR/dotfiles/gtk-4.0/settings.ini" \
     "$SCRIPT_DIR/setup-swaylock.sh" \
     "$ROOT_DIR/dotfiles/swaylock/config" \
+    "$SCRIPT_DIR/setup-niri.sh" \
     "$SCRIPT_DIR/setup-grub.sh"
 do
     if [[ -f "$file" ]]; then
