@@ -14,3 +14,4 @@ spotify
 swaylock-effects
 vscodium-bin
 yay
+whatsie-git
