@@ -49,4 +49,4 @@ read -r -p "Continue? [y/N] " answer
 [[ "$answer" =~ ^[Yy]$ ]] || exit 0
 
 # yay itself may be listed; --needed avoids reinstalling it.
-yay -S --needed "${packages[@]}"
+yay -S --needed "${packages[@]}" --noconfirm
