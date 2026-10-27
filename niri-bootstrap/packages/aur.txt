@@ -6,3 +6,4 @@ spotify
 mpvpaper
 coolercontrol-bin
 swaylock-effects
+whatsie-git
