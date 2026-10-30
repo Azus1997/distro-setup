@@ -15,3 +15,5 @@ swaylock-effects
 vscodium-bin
 yay
 whatsie-git
+catppuccin-gtk-theme-mocha
+bibata-cursor-theme
