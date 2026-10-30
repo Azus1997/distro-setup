@@ -7,3 +7,5 @@ mpvpaper
 coolercontrol-bin
 swaylock-effects
 whatsie-git
+catppuccin-gtk-theme-mocha
+bibata-cursor-theme
