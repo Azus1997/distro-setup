@@ -32,4 +32,4 @@ echo "This will synchronize repositories and upgrade the system."
 read -r -p "Continue? [y/N] " answer
 [[ "$answer" =~ ^[Yy]$ ]] || exit 0
 
-sudo pacman -Syu --needed "${packages[@]}"
+sudo pacman -Syu --needed "${packages[@]}" --noconfirm
