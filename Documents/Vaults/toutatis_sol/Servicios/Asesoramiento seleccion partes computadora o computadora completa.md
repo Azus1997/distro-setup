@@ -1,1 +1,0 @@
-como les digo que compren? Paso link?
